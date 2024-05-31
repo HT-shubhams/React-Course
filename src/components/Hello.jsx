@@ -1,8 +1,10 @@
 function Hello(props) {
+  const { name, message } = props;
+
   return (
     <>
       <h1>
-        Hello {props.name}, from a component {props.message}!
+        Hello {name}, from a component {message}!
       </h1>
       {/* {displayMessage()} */}
     </>
