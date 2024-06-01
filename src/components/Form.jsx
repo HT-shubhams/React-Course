@@ -7,27 +7,36 @@ export default function Form() {
   //     setName(e.target.value);
   //   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(name);
+  }
+
   return (
     <div>
-      <form>
-        <input
-          onChange={(e) => {
-            // handleChange(e);
-            setName({ ...name, firstName: e.target.value });
-          }}
-          type="text"
-          value={name.firstName}
-          placeholder="First Name"
-        />
-        <input
-          type="text"
-          onChange={(e) => setName({ ...name, lastName: e.target.value })}
-          value={name.lastName}
-          placeholder="Last Name"
-        />
-      </form>
       <div>
         {" "}
+        <form>
+          <input
+            onChange={(e) => {
+              // handleChange(e);
+              setName({ ...name, firstName: e.target.value });
+            }}
+            type="text"
+            value={name.firstName}
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            onChange={(e) => setName({ ...name, lastName: e.target.value })}
+            value={name.lastName}
+            placeholder="Last Name"
+          />
+          <br />
+          <button onClick={(e) => handleSubmit(e)}>Add</button>
+        </form>
+      </div>
+      <div>
         Your Name is: {name.firstName} {name.lastName}
       </div>
     </div>
