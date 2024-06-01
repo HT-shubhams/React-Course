@@ -1,8 +1,8 @@
-function Hello(props) {
+function Hello({ person }) {
   return (
     <>
       <h2>
-        Hi, {props.person.name}. {props.person.message} {props.person.emoji}
+        Hi, {person.name}. {person.message} {person.emoji}
       </h2>
     </>
   );
