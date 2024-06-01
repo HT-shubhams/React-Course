@@ -2,12 +2,15 @@ import { useState } from "react";
 import Hello from "./components/Hello";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const person = {
+    name: "Shubham",
+    message: "Welcome to HeapTrace!",
+    emoji: "👋",
+    seatNumbers: [1, 4, 7],
+  };
   return (
     <div className="App">
-      <Hello name="Shubham" message="using Props" />
-      <Hello name="John" message="using Props" />
+      <Hello person={person} />
     </div>
   );
 }
