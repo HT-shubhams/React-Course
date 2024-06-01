@@ -1,8 +1,10 @@
-function Hello({ name, message }) {
+// function Hello({ name, message, emoji }) {
+function Hello(props) {
+  props.name = "Samarth"; // Modifying props are not allowed as they are immutable
   return (
     <>
       <h1>
-        Hello {name}, from a component {message}!
+        Hello {props.name} {props.emoji}, from a component {props.message}!
       </h1>
       {/* {displayMessage()} */}
     </>
