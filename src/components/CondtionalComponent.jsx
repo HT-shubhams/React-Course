@@ -1,16 +1,11 @@
+import Code from "./Code";
+import Welcome from "./Welcome";
+
 export default function CondtionalComponent() {
-  const display = true;
+  const display = false;
   if (display) {
-    return (
-      <div>
-        <h3>This is Condtional Component</h3>
-      </div>
-    );
+    return <Welcome />;
   } else {
-    return (
-      <div>
-        <h3>Code Everyday!</h3>
-      </div>
-    );
+    return <Code />;
   }
 }
